@@ -50,9 +50,9 @@ sudo nano /etc/nginx/sites-available/wordpress
 server {
     listen 80;
     listen [::]:80;
-    root /var/www/html/<-ProjectFILE>;
+    root /var/www/html/<_ProjectFILE_>;
     index  index.php index.html index.htm;
-    server_name  <-AWS EC2 Public DNS>;
+    server_name  <_AWS EC2 Public DNS_>;
 
     location / {
     	try_files $uri $uri/ /index.php?$args;        
