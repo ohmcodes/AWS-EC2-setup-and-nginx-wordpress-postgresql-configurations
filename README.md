@@ -37,3 +37,36 @@ sudo systemctl enable nginx.service
 ![alt text][logo]
 
 [logo]: https://github.com/ohmcodes/AWS-EC2-setup-and-nginx-wordpress-postgresql-configurations/blob/master/default_apache.png?raw=true
+
+
+## 6. Pointing your Project File
+the default directory for web (/var/www/html/)
+
+
+## 7. Configure Nginx
+sudo nano /etc/nginx/sites-available/wordpress
+
+```
+server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/html/<![#f03c15]ProjectFILE>;
+    index  index.php index.html index.htm;
+    server_name  <![#f03c15]AWS EC2 Public DNS>;
+
+    location / {
+    	try_files $uri $uri/ /index.php?$args;        
+    }
+
+    location ~ \.php$ {
+    	fastcgi_split_path_info  ^(.+\.php)(/.+)$;
+    	fastcgi_index            index.php;
+    	fastcgi_pass             unix:/var/run/php/php7.1-fpm.sock; #Ubuntu 17.10
+  	#fastcgi_pass             unix:/var/run/php/php7.0-fpm.sock; #Ubuntu 17.04
+    	include                  fastcgi_params;
+    	fastcgi_param   PATH_INFO       $fastcgi_path_info;
+    	fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+}
+```
