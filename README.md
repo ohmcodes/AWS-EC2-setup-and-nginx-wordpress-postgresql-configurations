@@ -46,13 +46,13 @@ the default directory for web (/var/www/html/)
 ## 7. Configure Nginx
 sudo nano /etc/nginx/sites-available/wordpress
 
-```
+```diff
 server {
     listen 80;
     listen [::]:80;
-    root /var/www/html/<![#f03c15]ProjectFILE>;
+    root /var/www/html/<-ProjectFILE>;
     index  index.php index.html index.htm;
-    server_name  <![#f03c15]AWS EC2 Public DNS>;
+    server_name  <-AWS EC2 Public DNS>;
 
     location / {
     	try_files $uri $uri/ /index.php?$args;        
