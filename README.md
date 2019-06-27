@@ -39,8 +39,19 @@ sudo systemctl enable nginx.service
 [logo]: https://github.com/ohmcodes/AWS-EC2-setup-and-nginx-wordpress-postgresql-configurations/blob/master/default_apache.png?raw=true
 
 
-## 6. Pointing your Project File
-the default directory for web (/var/www/html/)
+## 6. Installing Wordpress and Pointing your Project File
+```
+sudo cd /var/www/html
+sudo wget https://wordpress.org/latest.tar.gz
+```
+### Then unzip the package using
+```
+sudo tar -xzvf latest.tar.gz
+```
+### Remove the zip file
+```
+sudo rm -rf latest.tar.gz
+```
 
 
 ## 7. Configure Nginx
@@ -104,7 +115,17 @@ for ubuntu 16
 sudo apt-get install php7.0-cli php7.0-cgi php7.0-fpm
 ```
 
-## 14. Encountered error
+## 14. Installing PG4WP (postgresql for Wordpress)
+### Download and configure the Fork version of WP4PG in your WordPress directory
+```
+cd wp-content // go to wp-content
+sudo git clone https://github.com/kevinoid/postgresql-for-wordpress.git
+sudo mv postgresql-for-wordpress/pg4wp pg4wp
+sudo rm -rf postgresql-for-wordpress
+sudo cp pg4wp/db.php db.php
+```
+
+## 15. Encountered error
 ### Your PHP installation appears to be missing the PostgreSQL extension which is required by WordPress with PG4WP.
 
 ### Pecl PDO package is now deprecated. By the way the debian package php5-pgsql now includes both the regular and the PDO driver:
@@ -112,13 +133,13 @@ sudo apt-get install php7.0-cli php7.0-cgi php7.0-fpm
 sudo apt-get install php-pgsql
 ```
 
-## 15. Configure Wordpress
+## 16. Configure Wordpress
 ### Now that Nginx is configured, run the commands below to create WordPress wp-config.php file.
 ```
 sudo mv /var/www/html/<ProjectFILE>/wp-config-sample.php /var/www/html/<ProjectFILE>/wp-config.php
 ```
 
-## 16. Then run the commands below to open WordPress configuration file.
+## 17. Then run the commands below to open WordPress configuration file.
 ```
 sudo nano /var/www/html/<ProjectFILE>/wp-config.php
 
@@ -144,5 +165,5 @@ define('DB_COLLATE', '');
 ```
 
 
-## 17. DONE!
+## 18. DONE!
 Enjoy
