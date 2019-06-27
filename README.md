@@ -3,16 +3,16 @@
 
 
 ## 1. Initialization: EC2 Setup  
-...*Log in to AWS
-...*Go to AWS Console
-...*On Instances, Launch Instance
-...*Choose (Free Tier) Ubuntu Server 16.04 LTS (HVM)
-...*Choose Free Tier Instance Type
-...*Skip to Step 6 - Configure Security Group
-...*Add Rule HTTP
-...*Review and Launch , Ignore warning, Launch
-...*Choose a key pair or create a new one your choice
-...*EC2 Setup - Done *
+...* Log in to AWS
+...* Go to AWS Console
+...* On Instances, Launch Instance
+...* Choose (Free Tier) Ubuntu Server 16.04 LTS (HVM)
+...* Choose Free Tier Instance Type
+...* Skip to Step 6 - Configure Security Group
+...* Add Rule HTTP
+...* Review and Launch , Ignore warning, Launch
+...* Choose a key pair or create a new one your choice
+...* EC2 Setup - Done *
 
 ## 2. AWS: Ubuntu Server Setup  
 ```
