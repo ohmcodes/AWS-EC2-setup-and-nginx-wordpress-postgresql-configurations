@@ -34,3 +34,6 @@ sudo systemctl enable nginx.service
 ```
 
 5. if you are successfull sample output below:
+![alt text][logo]
+
+[logo]: https://github.com/ohmcodes/AWS-EC2-setup-and-nginx-wordpress-postgresql-configurations/blob/master/default_apache.png?raw=true
