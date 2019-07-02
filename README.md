@@ -112,7 +112,7 @@ sudo apt install php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-
 for ubuntu 16  
 ### Install nginx, PHP for Processing, and Required PackagesPermalink
 ```
-sudo apt-get install php7.0-cli php7.0-cgi php7.0-fpm
+sudo apt-get install php7.0-cli php7.0-cgi php7.0-fpm php-dom php7.0-curl php7.0-zip
 ```
 
 ### If you wish to edit php.ini
