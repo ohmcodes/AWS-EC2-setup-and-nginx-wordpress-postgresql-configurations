@@ -115,6 +115,12 @@ for ubuntu 16
 sudo apt-get install php7.0-cli php7.0-cgi php7.0-fpm
 ```
 
+### If you wish to edit php.ini
+```
+sudo nano /etc/php/7.0/fpm/php.ini
+sudo systemctl restart php7.0-fpm
+```
+
 ## 14. Installing PG4WP (postgresql for Wordpress)
 ### Download and configure the Fork version of WP4PG in your WordPress directory
 ```
