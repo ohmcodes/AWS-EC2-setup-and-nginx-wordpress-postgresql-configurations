@@ -164,6 +164,18 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 ```
 
+## Installing template manually (E.G: Avada template)
+Download Avada and extract it then compress for sending it out to server (Avada.zip)
+upload file from local to server via secured scp
+```
+scp -i "<keypair>.pem" "<filename to be upload>" <user>@<ec2 instance public dns>
+```
+
+## Download unzip
+```
+apt-get install unzip
+unzip <filename>.zip if zip file
+```
 
 ## 18. DONE!
 Enjoy
