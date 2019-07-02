@@ -177,5 +177,10 @@ apt-get install unzip
 unzip <filename>.zip if zip file
 ```
 
+## Move the template
+```
+mv <filename> <ProjectPath>/wp-content/themes/
+```
+
 ## 18. DONE!
 Enjoy
