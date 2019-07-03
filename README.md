@@ -121,6 +121,18 @@ sudo nano /etc/php/7.0/fpm/php.ini
 sudo systemctl restart php7.0-fpm
 ```
 
+### Setup php mail()
+```
+sudo apt-get install sendmail
+sudo sendmailconfig ~yes to all
+sudo service nginx restart
+```
+
+### Modify restriction to wp forlders
+```
+chmod 777 to /wp-content /themes /plugins folders
+```
+
 ## 14. Installing PG4WP (postgresql for Wordpress)
 ### Download and configure the Fork version of WP4PG in your WordPress directory
 ```
