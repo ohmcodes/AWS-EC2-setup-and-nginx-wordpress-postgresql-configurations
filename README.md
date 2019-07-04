@@ -76,7 +76,8 @@ server {
     	fastcgi_split_path_info  ^(.+\.php)(/.+)$;
     	fastcgi_index            index.php;
     	fastcgi_pass             unix:/var/run/php/php7.1-fpm.sock; #Ubuntu 17.10
-  	#fastcgi_pass             unix:/var/run/php/php7.0-fpm.sock; #Ubuntu 17.04
+  	    #fastcgi_pass             unix:/var/run/php/php7.0-fpm.sock; #Ubuntu 17.04
+        #fastcgi_pass             unix:/var/run/php5-fpm.sock; #Ubuntu 14
     	include                  fastcgi_params;
     	fastcgi_param   PATH_INFO       $fastcgi_path_info;
     	fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
