@@ -131,7 +131,7 @@ sudo service nginx restart
 
 ### Modify restriction to wp forlders
 ```
-chmod 777 to /wp-content /themes /plugins folders
+chmod 777 to /themes /plugins folders
 ```
 
 ## 14. Installing PG4WP (postgresql for Wordpress)
@@ -187,7 +187,7 @@ define('DB_COLLATE', '');
 Download Avada and extract it then compress for sending it out to server (Avada.zip)
 upload file from local to server via secured scp
 ```
-scp -i "<keypair>.pem" "<filename to be upload>" <user>@<ec2 instance public dns>
+scp -i "<keypair>.pem" "<filename to be upload>" <user>@<ec2 instance public dns>:<server file path>
 ```
 
 ## Download unzip
