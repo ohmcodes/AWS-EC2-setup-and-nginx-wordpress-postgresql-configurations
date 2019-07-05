@@ -131,7 +131,7 @@ sudo service nginx restart
 
 ### Modify restriction to wp forlders
 ```
-chmod 777 to /themes /plugins folders
+chmod 777 to /wp-content /themes /plugins folders permission for installation of anything
 ```
 
 ## 14. Installing PG4WP (postgresql for Wordpress)
