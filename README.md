@@ -201,5 +201,19 @@ unzip <filename>.zip if zip file
 mv <filename> <ProjectPath>/wp-content/themes/
 ```
 
+## Change php.ini values base on Avada requirements and restart php
+```
+sudo nano /opt/bitnami/php/etc/php.ini
+
+line 389
+max_execution_time
+
+line 402
+max_input_vars
+
+to restart
+sudo /opt/bitnami/ctlscript.sh restart php-fpm
+```
+
 ## 18. DONE!
 Enjoy
