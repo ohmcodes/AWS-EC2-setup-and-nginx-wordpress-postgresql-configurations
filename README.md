@@ -188,6 +188,9 @@ Download Avada and extract it then compress for sending it out to server (Avada.
 upload file from local to server via secured scp
 ```
 scp -i "<keypair>.pem" "<filename to be upload>" <user>@<ec2 instance public dns>:<server file path>
+
+aws themes folder location
+/apps/wordpress/htdocs/wp-content/themes
 ```
 
 ## Download unzip
