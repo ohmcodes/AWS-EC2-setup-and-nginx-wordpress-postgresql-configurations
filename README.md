@@ -209,10 +209,13 @@ mv <filename> <ProjectPath>/wp-content/themes/
 sudo nano /opt/bitnami/php/etc/php.ini
 
 line 389
-max_execution_time
+max_execution_time 120
 
 line 402
-max_input_vars
+max_input_vars 1500
+
+line 1064
+sendmail_path = "env -i /usr/sbin/sendmail -t -i"
 
 to restart
 sudo /opt/bitnami/ctlscript.sh restart php-fpm
