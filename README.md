@@ -225,6 +225,12 @@ sudo chmod 777 -R /opt/bitnami/apps/wordpress/htdocs/
 
 not necessary just for the record if needed (if chmod not working)
 sudo chown bitnami:bitnami -R /opt/bitnami/apps/wordpress/htdocs/
+
+remove the bitnami banner
+sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1
+
+restart apache
+sudo /opt/bitnami/ctlscript.sh restart apache
 ```
 
 ## 18. DONE!
