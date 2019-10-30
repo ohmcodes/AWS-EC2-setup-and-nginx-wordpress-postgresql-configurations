@@ -219,6 +219,12 @@ sendmail_path = "env -i /usr/sbin/sendmail -t -i"
 
 to restart
 sudo /opt/bitnami/ctlscript.sh restart php-fpm
+
+allow access to themes folder or plugins
+sudo chmod 777 -R /opt/bitnami/apps/wordpress/htdocs/
+
+not necessary just for the record if needed (if chmod not working)
+sudo chown bitnami:bitnami -R /opt/bitnami/apps/wordpress/htdocs/
 ```
 
 ## 18. DONE!
